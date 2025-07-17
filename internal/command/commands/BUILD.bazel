@@ -1,0 +1,17 @@
+load("@rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "commands",
+    srcs = [
+        "command.go",
+        "help.go",
+        "listdir.go",
+        "readconfig.go",
+    ],
+    importpath = "github.com/kartones/kc/internal/command/commands",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//internal/interfaces",
+        "@in_gopkg_yaml_v3//:yaml_v3",
+    ],
+)

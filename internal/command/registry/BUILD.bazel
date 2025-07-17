@@ -1,0 +1,9 @@
+load("@rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "registry",
+    srcs = ["registry.go"],
+    importpath = "github.com/kartones/kc/internal/command/registry",
+    visibility = ["//visibility:public"],
+    deps = ["//internal/interfaces"],
+)
