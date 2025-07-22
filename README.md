@@ -38,6 +38,14 @@ bazelisk build //:kc_windows_arm64
 
 Binaries will be available in `bazel-bin/`.
 
+### Updating BUILD files
+
+Run Gazelle, and it will regenerate/update accordingly the `BUILD.bazel` files.
+
+```bash
+bazelisk run //:gazelle
+```
+
 ## Usage Examples
 
 ```bash

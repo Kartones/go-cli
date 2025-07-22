@@ -1,0 +1,19 @@
+load("@rules_go//go:def.bzl", "go_binary", "go_library")
+
+go_library(
+    name = "kc_lib",
+    srcs = ["main.go"],
+    importpath = "github.com/kartones/kc/cmd/kc",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//internal/command/commands",
+        "//internal/command/registry",
+    ],
+)
+
+# Note that we have the same at the root BUILD.bazel file.
+go_binary(
+    name = "kc",
+    embed = [":kc_lib"],
+    visibility = ["//visibility:public"],
+)

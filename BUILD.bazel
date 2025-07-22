@@ -4,13 +4,10 @@ load("@rules_go//go:def.bzl", "go_binary", "go_cross_binary")
 # gazelle:prefix github.com/kartones/kc
 gazelle(name = "gazelle")
 
+# keep: Convenience duplication of //cmd/kc:kc just for sample purposes.
 go_binary(
     name = "kc",
-    srcs = ["cmd/kc/main.go"],
-    deps = [
-        "//internal/command/commands",
-        "//internal/command/registry",
-    ],
+    embed = ["//cmd/kc:kc_lib"],
     visibility = ["//visibility:public"],
 )
 
