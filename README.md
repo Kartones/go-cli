@@ -60,3 +60,11 @@ bazelisk build //:kc
 
 ./bazel-bin/kc_/kc list-dir .
 ``` 
+
+macOS Apple Silicon:
+
+![Running on macOS](docs/kc_macos.png)
+
+Windows ARM:
+
+![Running on Windows ARM](docs/kc_windows.png)
