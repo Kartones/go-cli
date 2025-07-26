@@ -1,0 +1,6 @@
+
+common --enable_bzlmod
+common --lockfile_mode=off
+
+# No telemetry
+common --repo_env=DO_NOT_TRACK=1
